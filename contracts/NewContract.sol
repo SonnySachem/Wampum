@@ -15,7 +15,7 @@ contract Wampum {
 	constructor() public {
 		Wampum.balances[tx.origin] = 1000000000000;
 	}
-
+ 
 	function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
 		if (Wampum.balances[msg.sender] < amount) return false;
 		Wampum.balances[msg.sender] -= amount;
