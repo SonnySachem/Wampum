@@ -1,5 +1,5 @@
 pragma solidity >=0.4.22 <0.7.0;
-
+⅘
 import "./ConvertLib.sol";
 
 // This is just a simple example of a coin-like contract.
@@ -15,7 +15,7 @@ contract Wampum {
 	constructor() public {
 		Wampum.balances[tx.origin] = 1000000000000;
 	}
- 
+ 1
 	function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
 		if (Wampum.balances[msg.sender] < amount) return false;
 		Wampum.balances[msg.sender] -= amount;
@@ -31,4 +31,4 @@ contract Wampum {
 	function getBalance(address addr) public view returns(uint) {
 		return Wampum.balances[addr];
 	}
-}
+}I'm
