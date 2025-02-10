@@ -31,4 +31,4 @@ contract Wampum {
 	function getBalance(address addr) public view returns(uint) {
 		return Wampum.balances[addr];
 	}
-}
+},
