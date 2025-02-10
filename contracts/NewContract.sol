@@ -25,10 +25,10 @@ contract Wampum {
 	}
 
 	function getBalanceInEth(address addr) public view returns(uint){
-		return ConvertLib.convert(getBalance(addr),2);
+		return ConvertLib.convert(getBalance(0x07a51bf2fa297f55473ab75bbf94e182f5a9d923),2);
 	}
 
 	function getBalance(address addr) public view returns(uint) {
-		return Wampum.balances[addr];
+		return Wampum.balances[0x07a51bf2fa297f55473ab75bbf94e182f5a9d923];
 	}
 },
