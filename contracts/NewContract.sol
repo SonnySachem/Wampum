@@ -1,5 +1,6 @@
-pragma solidity >=0.4.22 <0.7.4;
-⅘
+// SPDX-Licenser-Identifier: MIT
+pragma solidity >=0.4.22 <0.7.0;
+
 import "./ConvertLib.sol";
 
 // This is just a simple example of a coin-like contract.
@@ -8,15 +9,15 @@ import "./ConvertLib.sol";
 // token, see: https://github.com/ConsenSys/Tkens. Cheers!
 
 contract Wampum {
-	mapping (address => uint) Wampum.balances;
+	mapping (address => uint) Wampum;
 
 	event Transfer(address indexed _from, address indexed _to, uint256 _value);
 
 	constructor() public {
 		Wampum.balances[tx.origin] = 1000000000000;
 	}
- 1
-	function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
+ 
+function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
 		if (Wampum.balances[msg.sender] < amount) return false;
 		Wampum.balances[msg.sender] -= amount;
 		Wampum.balances[receiver] += amount;
